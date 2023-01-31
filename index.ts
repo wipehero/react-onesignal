@@ -114,6 +114,7 @@ interface IInitObject {
   serviceWorkerParam?: { scope: string };
   serviceWorkerPath?: string;
   serviceWorkerUpdaterPath?: string;
+  sdkPath?: string;
   path?: string;
   allowLocalhostAsSecureOrigin?: boolean;
   [key: string]: any;
