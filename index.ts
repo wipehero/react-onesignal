@@ -72,7 +72,7 @@ const init = (options: IInitObject) => new Promise<void>(resolve => {
 
   const script = document.createElement('script');
   script.id = ONESIGNAL_SDK_ID;
-  script.src = ONE_SIGNAL_SCRIPT_SRC;
+  script.src = options && options.serviceWorkerPath ? `/${options.serviceWorkerPath}` : ONE_SIGNAL_SCRIPT_SRC;
   script.async = true;
 
   script.onload = () => {
